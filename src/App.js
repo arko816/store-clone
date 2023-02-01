@@ -1,7 +1,7 @@
 import './App.css';
 import PreNavbar from './components/PreNavbar';
 import Navbar from "./components/Navbar.js"
-import {  BrowserRouter as Router,Route } from "react-router-dom"
+import {  BrowserRouter as Router,Routes,Route } from "react-router-dom"
 import {Link} from "react-router-dom"
 import Slider from "./components/Slider.js"
 import data from "./data/data.json"
@@ -34,20 +34,20 @@ function App() {
        <StarProduct starProduct={data.starProduct} />
        <Heading text="HOT ACCESSORIES" />
        <HotAccessoriesMenu />
+        <Routes>
+       <Route exact path="/music" element={<HotAccessories music={data.hotAccessories.music} musicCover={data.hotAccessoriesCover.music}  />}/>
+       
+       
 
-       {/* <Route path="/music"> */}
-       <HotAccessories music={data.hotAccessories.music} musicCover={data.hotAccessoriesCover.music}  />
-       {/* </Route> */}
-
-       {/* <Route exact path="/smartDevice"> */}
+       {/* <Route exact path="/smartDevice">
        <HotAccessories smartDevice={data.hotAccessories.smartDevice} smartDeviceCover={data.hotAccessoriesCover.smartDevice}  />
-       {/* </Route> */}
+       </Route>
 
-       {/* <Route exact path="/home"> */}
+       <Route exact path="/home">
        <HotAccessories home={data.hotAccessories.home} homeCover={data.hotAccessoriesCover.home}  />
-       {/* </Route> */}
+       </Route>
 
-       {/* <Route exact path="/lifestyle">
+       <Route exact path="/lifestyle">
        <HotAccessories lifeStyle={data.hotAccessories.lifeStyle} lifeStyleCover={data.hotAccessoriesCover.lifeStyle}  />
        </Route>
 
@@ -55,7 +55,7 @@ function App() {
        <Route exact path="/mobileAccessories">
        <HotAccessories mobileAccessories={data.hotAccessories.mobileAccessories} mobileAccessoriesCover={data.hotAccessoriesCover.mobileAccessories}  />
        </Route> */}
-
+      </Routes>
        <Heading text="PRODUCT REVIEWS"/>
 
        <ProductReviews productReviews={data.productReviews}/>
