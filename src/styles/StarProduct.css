@@ -1,0 +1,27 @@
+.starProduct{
+    display: grid;
+   /* justify-content: center;
+   align-items: center; */
+   grid-template-columns: 1fr 1fr;
+   margin: 1vmax auto;
+}
+/* .starProduct>div:first-child{
+    display: flex;
+    height:1836px;
+}*/
+.starProduct>div:last-child{ 
+    display: flex;
+    flex-wrap: wrap; 
+     width: 46%;
+ } 
+
+.starProduct img{
+    transition: all 0.5s;
+    height:612px;
+    width:612px;
+    /* border-radius:50%; */
+}
+
+.starProduct img:hover{
+    box-shadow: 15px 15px 15px rgba(53, 53, 53, 0.363);
+}
